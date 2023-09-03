@@ -1,5 +1,13 @@
 $menuWidth: 18.75rem;
 
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+
 .menu {
 	@media (max-width: 991px) {
 		&::after {
@@ -54,6 +62,10 @@ $menuWidth: 18.75rem;
 	@media (min-width: 992px) {
 		margin: 0 -8px;
 	}
+	@media (max-width: 991px) {
+		overflow-y: auto;
+		height: 100%;
+	}
 }
 
 .navbar-light .navbar-nav.menu-list .nav-link:hover {
@@ -63,10 +75,6 @@ $menuWidth: 18.75rem;
 			color: $blue;
 		}
 	}
-}
-
-.logo {
-	font-weight: 600;
 }
 
 .close-btn {

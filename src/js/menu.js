@@ -1,10 +1,17 @@
 const menu = document.querySelector(".menu");
+const menuBtn = document.querySelector(".menu-btn");
 const closeBtn = document.querySelector(".close-btn");
 
-const clickHandler = (e) => {
+const overlayClickHandler = (e) => {
 	if (menu.classList.contains("show") && !e.target.closest(".menu-wrapper")) {
 		closeBtn.click();
 	}
 };
 
-menu.addEventListener("click", clickHandler);
+const toggleBodyLockClass = () => {
+	document.body.classList.toggle("lock");
+};
+
+menu.addEventListener("click", overlayClickHandler);
+menuBtn.addEventListener("click", toggleBodyLockClass);
+closeBtn.addEventListener("click", toggleBodyLockClass);
