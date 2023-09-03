@@ -1,0 +1,128 @@
+.card {
+	position: relative;
+	z-index: 1;
+
+	display: block;
+	height: 365px;
+	padding: 15px 30px;
+	overflow: hidden;
+
+	background: #e1e1e1;
+	color: #00325c;
+	border-radius: 20px;
+
+	&:hover {
+		text-decoration: none;
+		color: #00325c;
+	}
+
+	&--blue {
+		background: $blue;
+		color: $white;
+
+		&:hover {
+			color: $white;
+		}
+	}
+	&--dark-blue {
+		background: #00325c;
+		color: $white;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&--pool {
+		@media (max-width: 767px) {
+			height: 190px;
+		}
+	}
+
+	&--container {
+		@media (max-width: 767px) {
+			height: 457px;
+		}
+
+		@media (max-width: 374px) {
+			.card__image {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+
+	&--gas {
+		@media (max-width: 767px) {
+			height: 251px;
+		}
+	}
+
+	&--blockchain {
+		padding: 10px 30px;
+
+		@media (max-width: 767px) {
+			height: 83px;
+		}
+	}
+
+	// .card__title
+	&__title {
+		display: block;
+		margin: 0;
+		color: inherit;
+		font-size: 24px;
+		font-weight: 700;
+	}
+	// .card__category
+	&__category {
+		display: block;
+		color: inherit;
+		font-size: 18px;
+		line-height: 1;
+	}
+
+	&__image {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+
+		object-fit: contain;
+
+		transition: transform 0.3s ease;
+
+		&--right {
+			left: auto;
+			right: 0;
+		}
+
+		.card--blockchain & {
+			top: -58%;
+			left: 150px;
+			@media (min-width: 768px) {
+				right: 0;
+				left: auto;
+			}
+		}
+
+		.card--bitmain &,
+		.card--whatsminer & {
+			@media (max-width: 479px) {
+				left: auto;
+				right: 52px;
+			}
+		}
+
+		.card--water & {
+			right: -111px;
+			bottom: -5px;
+		}
+	}
+
+	&:hover {
+		.card__image {
+			transform: scale(1.05);
+		}
+	}
+}

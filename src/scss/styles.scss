@@ -1,27 +1,4 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
-
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
-// Import all of Bootstrap's CSS
-
-// @import "bootstrap/scss/bootstrap";
-
-// Option 2
-//
-// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+@import "./fonts.scss";
 
 // Toggle global options
 $enable-gradients: true;
@@ -35,12 +12,21 @@ $blue: #0078db;
 $body-bg: #e1e1e1;
 $border-radius: 0.4rem;
 $success: #7952b3;
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1500px,
+);
+
 $container-max-widths: (
-	sm: 540px,
-	md: 720px,
-	lg: 960px,
-	xl: 1140px,
-	xxl: 1380px,
+	sm: 550px,
+	md: 740px,
+	lg: 980px,
+	xl: 1160px,
+	xxl: 1440px,
 );
 
 // Required
@@ -94,3 +80,5 @@ $container-max-widths: (
 //
 @import "./common.scss";
 @import "./header.scss";
+@import "./categories.scss";
+@import "./card.scss";

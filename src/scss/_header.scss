@@ -100,28 +100,25 @@ $menuWidth: 18.75rem;
 			background-color: $white;
 		}
 		&::before {
-			transform: rotate(-45deg);
-			top: calc(50% - 1px);
+			top: 0px;
 		}
 		&::after {
-			transform: rotate(45deg);
-			bottom: calc(50% - 1px);
+			bottom: 0px;
 		}
 		span {
 			top: calc(50% - 1px);
-			transform: scale(0);
 		}
-		.collapsed & {
+		[aria-expanded="true"] & {
 			span {
-				transform: scale(1);
+				transform: scale(0);
 			}
 			&::before {
-				top: 0px;
-				transform: rotate(0deg);
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
 			}
 			&::after {
-				bottom: 0px;
-				transform: rotate(0deg);
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
 			}
 		}
 	}

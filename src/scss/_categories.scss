@@ -1,0 +1,111 @@
+$gap: 20px;
+$gap-mobile: 15px;
+
+.categories-wrapper {
+	padding: 15px;
+	gap: $gap-mobile;
+	background: $white;
+	border-radius: 20px;
+	background: $white;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+
+	@media (min-width: 992px) {
+		gap: $gap;
+		padding: 30px;
+	}
+
+	@media (max-width: 1499px) {
+		flex-wrap: wrap;
+	}
+
+	> div {
+		display: grid;
+		gap: $gap-mobile;
+		height: 100%;
+
+		@media (min-width: 992px) {
+			gap: $gap;
+		}
+	}
+}
+.col-left {
+	flex: 1;
+
+	@media (min-width: 1500px) {
+		flex: 0 0 427px;
+	}
+}
+.col-center {
+	flex: 1 1 100%;
+
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 190px 166px 251px 83px;
+		grid-template-areas: "pool hotel" "container hotel" "container gas" "blockchain blockchain";
+	}
+
+	@media (min-width: 1500px) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 190px 166px 251px 83px;
+		grid-template-areas: "pool hotel" "container hotel" "container gas" "blockchain blockchain";
+		flex: 0 0 650px;
+	}
+
+	@media (max-width: 1499px) {
+		order: 1;
+	}
+
+	.card {
+		@media (min-width: 768px) {
+			height: 100%;
+		}
+	}
+
+	.card--pool {
+		@media (min-width: 768px) {
+			grid-area: pool;
+		}
+	}
+
+	.card--container {
+		@media (min-width: 768px) {
+			grid-area: container;
+		}
+	}
+
+	.card--hotel {
+		@media (min-width: 768px) {
+			grid-area: hotel;
+		}
+	}
+
+	.card--gas {
+		@media (min-width: 768px) {
+			grid-area: gas;
+		}
+	}
+
+	.card--blockchain {
+		@media (min-width: 768px) {
+			grid-area: blockchain;
+		}
+	}
+}
+.col-right {
+	flex: 1 1 100%;
+	height: auto;
+
+	grid-template-rows: 340px 390px;
+
+	@media (min-width: 768px) {
+		flex: 0 0 40%;
+	}
+
+	@media (min-width: 1500px) {
+		flex: 0 0 203px;
+	}
+
+	.card {
+		height: 100%;
+	}
+}

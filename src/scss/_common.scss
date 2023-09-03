@@ -1,12 +1,28 @@
+body {
+	font-family: Ruberoid, sans-serif;
+}
+
 .wrapper {
 	min-height: 100vh;
 }
 
 .container {
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 15px;
+	padding-left: 15px;
+	@media (min-width: 992px) {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
 }
 
 .section {
-	margin: 107px 0;
+	margin: 30px 0;
+
+	@media (min-width: 480px) {
+		margin: 50px 0;
+	}
+
+	@media (min-width: 992px) {
+		margin: 107px 0;
+	}
 }
