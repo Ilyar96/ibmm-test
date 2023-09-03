@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^4.6.2"
+    "bootstrap": "^4.6.2",
+    "vanilla-lazyload": "^17.8.4"
   },
   "devDependencies": {
     "sass": "^1.64.1",

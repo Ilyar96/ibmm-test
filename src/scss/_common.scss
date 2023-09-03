@@ -26,3 +26,7 @@ body {
 		margin: 107px 0;
 	}
 }
+
+img:not([src]):not([srcset]) {
+	visibility: hidden;
+}
